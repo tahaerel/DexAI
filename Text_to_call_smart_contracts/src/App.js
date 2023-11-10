@@ -4,26 +4,30 @@ import ErrorMessage from "./ErrorMessage";
 import TxList from "./TxList";
 import { gptfunction } from "./gptyeni";
 import { useEffect } from "react";
-
+import React from 'react'
+import {
+  BeatLoading, BounceLoading, CircularLoading,
+  ClockLoading, RotateLoading, SpinLoading,
+  WaveLoading, DashLoading, CopperLoading
+} from 'respinner'
 //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
 
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
-  const { ethereum } = window
-
+  const { ethereum } = window;
 
   console.log("ether:" + ether);
   console.log("addr:" + addr);
-  try {
-    if (!window.ethereum)
-      throw new Error("No crypto wallet found. Please install it.");
 
+  try {
+    if (!window.ethereum) {
+      throw new Error("No crypto wallet found. Please install it.");
+    }
 
     await ethereum.request({
       method: 'wallet_switchEthereumChain',
       params: [{ chainId: '0x15eb' }],
     });
-  }
-  catch (switchError) {
+  } catch (switchError) {
     if (switchError.code === 4902) {
       try {
         await ethereum.request({
@@ -32,33 +36,35 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
             {
               chainId: '0x15eb',
               chainName: 'opBNB Testnet',
-              rpcUrls: ['https://opbnb-testnet-rpc.bnbchain.org'] /* ... */,
+              rpcUrls: ['https://opbnb-testnet-rpc.bnbchain.org'],
             },
           ],
         });
       } catch (addError) {
-        // handle "add" error
+        setError("Failed to add Ethereum chain: " + addError.message);
+        return; // Exit the function
       }
+    } else {
+      setError("Failed to switch Ethereum chain: " + switchError.message);
+      return; // Exit the function
     }
-    // handle other "switch" errors
   }
 
-
-  await window.ethereum.send("eth_requestAccounts");
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  const signer = provider.getSigner();
-  ethers.utils.getAddress(addr);
-  const tx = await signer.sendTransaction({
-    to: addr,
-    value: ethers.utils.parseEther(ether)
-  })
-  console.log({ ether, addr });
-  console.log("tx", tx);
-  setTxs([tx]);
-
-  //catch (err) {
-  //setError(err.message);
-  //}
+  try {
+    await window.ethereum.send("eth_requestAccounts");
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const signer = provider.getSigner();
+    ethers.utils.getAddress(addr);
+    const tx = await signer.sendTransaction({
+      to: addr,
+      value: ethers.utils.parseEther(ether),
+    });
+    console.log({ ether, addr });
+    console.log("tx", tx);
+    setTxs([tx]);
+  } catch (err) {
+    setError("Failed to send transaction: " + err.message);
+  }
 };
 
 
@@ -69,8 +75,10 @@ export default function App() {
   const [txs, setTxs] = useState([]);
   const [adress, setAdres] = useState()
   const [miktar, setMiktar] = useState()
+  const [loading, setLoading] = useState(false); // Add loading state
 
   const handleSubmit = async (e) => {
+
     if (e) {
       e.preventDefault();
     }
@@ -84,6 +92,8 @@ export default function App() {
       ether: miktar,
       addr: adress,
     });
+
+    setLoading(false); // Set loading back to false when done
   };
 
   useEffect(() => {
@@ -94,6 +104,7 @@ export default function App() {
 
   const handleGpt = async () => {
     console.log("handleGpt function called");
+    setLoading(true); // Set loading to true
 
     const response = await gptfunction(promt);
     console.log("RESPONSEEE= ", response[0], response[3]);
@@ -107,7 +118,6 @@ export default function App() {
     console.log("Form Sumbit")
   }
 
-
   return (
     <div className="flex items-center justify-center h-screen">
       <div className="credit-card w-full lg:w-1/2 sm:w-auto shadow-lg mx-auto rounded-xl bg-white">        <main className="mt-4 p-4">
@@ -115,6 +125,8 @@ export default function App() {
           Enter your request
         </h1>
         <div className="">
+
+
 
           <div className="my-3">
             <input
@@ -136,8 +148,19 @@ export default function App() {
           >
             Send
           </button>
-          <ErrorMessage message={error} />
-          <TxList txs={txs} />
+          {loading ? (
+            <div className="text-center py-4">
+
+              <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                <CircularLoading size={40} duration={1} stroke="#4197ff" />
+              </div>
+            </div>
+          ) : (
+            <div>
+              <TxList txs={txs} />
+              <ErrorMessage message={error} />
+            </div>
+          )}
         </footer>
       </div>
     </div>

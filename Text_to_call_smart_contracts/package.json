@@ -14,6 +14,7 @@
     "react-chatbot-kit": "^2.1.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "respinner": "^4.0.1",
     "source-map-loader": "^4.0.1",
     "web-vitals": "^2.1.4"
   },
