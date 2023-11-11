@@ -1,4 +1,3 @@
-//Merhaba güzellik, canım çok sıkıldı. Bu yüzden 0x3334234 adresine bnb ağından 5 usdt göndermek isterim. bana yardım etsene.
 
 const OpenAI = require("openai") ;
 const openai = new OpenAI({ apiKey: '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',dangerouslyAllowBrowser: true })
@@ -18,6 +17,7 @@ export async function gptfunction(data) {
       console.log(completion.choices[0].message.content);
 
       const text = completion.choices[0].message.content;
+      console.log(text);
 
       const addressMatch = text.match(/Hedef adres: (.*?) para birimi: (.*?) ağ: (.*?) miktar: ([\d.]+)/);
 

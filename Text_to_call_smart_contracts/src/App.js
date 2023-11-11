@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ethers } from "ethers";
 import ErrorMessage from "./ErrorMessage";
+import AppContracts from './App_Contract'; // App_Contracts.js dosyasını içe aktarın
 import TxList from "./TxList";
-import { gptfunction } from "./gptyeni";
+import { gptfunction } from "./gpt_transaction";
 import { useEffect } from "react";
 import React from 'react'
 import {
@@ -69,7 +70,11 @@ const startPayment = async ({ setError, setTxs, ether, addr }) => {
 
 
 export default function App() {
+  const [showAppContracts, setShowAppContracts] = useState(false);
 
+  const handleToggleAppContracts = () => {
+    setShowAppContracts(!showAppContracts);
+  };
   const [promt, setPromt] = useState(null)
   const [error, setError] = useState();
   const [txs, setTxs] = useState([]);
@@ -163,7 +168,27 @@ export default function App() {
           )}
         </footer>
       </div>
+      <div>
+      {showAppContracts ? (
+        <AppContracts handleToggleAppContracts={handleToggleAppContracts} />
+      ) : (
+        <button
+        onClick={handleToggleAppContracts}
+        style={{
+          padding: '10px 15px',
+          backgroundColor: 'blue', // Butonun arka plan rengini ayarlayabilirsiniz.
+          color: 'white', // Buton metin rengini ayarlayabilirsiniz.
+          border: 'none', // Butonun kenarlığını kaldırabilirsiniz.
+          cursor: 'pointer', // Farenin üstüne geldiğinde imlecin bir el işareti olmasını sağlar.
+          borderRadius: '5px', // Butonun köşelerini yuvarlayabilirsiniz.
+        }}
+      >
+        Example 2
+      </button>
+      )}
     </div>
+    </div>
+  
   );
 }
 

@@ -16,7 +16,8 @@
     "react-scripts": "5.0.1",
     "respinner": "^4.0.1",
     "source-map-loader": "^4.0.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "web3": "^4.2.2"
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
