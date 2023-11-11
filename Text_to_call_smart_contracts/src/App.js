@@ -130,9 +130,6 @@ export default function App() {
           Enter your request
         </h1>
         <div className="">
-
-
-
           <div className="my-3">
             <input
               name="request"
@@ -169,26 +166,26 @@ export default function App() {
         </footer>
       </div>
       <div>
-      {showAppContracts ? (
-        <AppContracts handleToggleAppContracts={handleToggleAppContracts} />
-      ) : (
-        <button
-        onClick={handleToggleAppContracts}
-        style={{
-          padding: '10px 15px',
-          backgroundColor: 'blue', // Butonun arka plan rengini ayarlayabilirsiniz.
-          color: 'white', // Buton metin rengini ayarlayabilirsiniz.
-          border: 'none', // Butonun kenarlığını kaldırabilirsiniz.
-          cursor: 'pointer', // Farenin üstüne geldiğinde imlecin bir el işareti olmasını sağlar.
-          borderRadius: '5px', // Butonun köşelerini yuvarlayabilirsiniz.
-        }}
-      >
-        Example 2
-      </button>
-      )}
+        {showAppContracts ? (
+          <AppContracts handleToggleAppContracts={handleToggleAppContracts} />
+        ) : (
+          <button
+            onClick={handleToggleAppContracts}
+            style={{
+              padding: '10px 15px',
+              backgroundColor: 'blue', // Butonun arka plan rengini ayarlayabilirsiniz.
+              color: 'white', // Buton metin rengini ayarlayabilirsiniz.
+              border: 'none', // Butonun kenarlığını kaldırabilirsiniz.
+              cursor: 'pointer', // Farenin üstüne geldiğinde imlecin bir el işareti olmasını sağlar.
+              borderRadius: '5px', // Butonun köşelerini yuvarlayabilirsiniz.
+            }}
+          >
+            Example 2
+          </button>
+        )}
+      </div>
     </div>
-    </div>
-  
+
   );
 }
 

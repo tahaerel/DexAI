@@ -29,49 +29,49 @@ function App() {
       </div>
     );
   };
-  
+
   const connectContract = async () => {
     try {
       // Akıllı kontrat nesnesini burada tanımlayın
       const ABI = [
         {
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "newCity",
-                    "type": "string"
-                }
-            ],
-            "name": "setMyCity",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "newCity",
+              "type": "string"
+            }
+          ],
+          "name": "setMyCity",
+          "outputs": [],
+          "stateMutability": "nonpayable",
+          "type": "function"
         },
         {
-            "inputs": [
-                {
-                    "internalType": "string",
-                    "name": "initialCity",
-                    "type": "string"
-                }
-            ],
-            "stateMutability": "nonpayable",
-            "type": "constructor"
+          "inputs": [
+            {
+              "internalType": "string",
+              "name": "initialCity",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "constructor"
         },
         {
-            "inputs": [],
-            "name": "myCity",
-            "outputs": [
-                {
-                    "internalType": "string",
-                    "name": "",
-                    "type": "string"
-                }
-            ],
-            "stateMutability": "view",
-            "type": "function"
+          "inputs": [],
+          "name": "myCity",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "",
+              "type": "string"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function"
         }
-    ];// Verilen ABI tanımını ekleyin
+      ];// Verilen ABI tanımını ekleyin
       const address = "0xA8B48c44176c5cBf274d078C98565d7dB7d7ce00"; // Akıllı kontrat adresini ekleyin
       const web3 = new Web3(window.ethereum);
       const contract = new web3.eth.Contract(ABI, address);
@@ -81,7 +81,7 @@ function App() {
       console.error(error);
     }
   };
-  
+
 
 
   const setCity = async () => {
@@ -91,13 +91,13 @@ function App() {
         return;
       }
       const newCity = await gptfunction(document.getElementById("newCityInput").value);
-      console.log("NEW CITY"+ newCity);
+      console.log("NEW CITY" + newCity);
       await window.contract.methods.setMyCity(newCity).send({ from: account });
       setSetStatus("City set to: " + newCity);
     } catch (error) {
       console.error(error);
     }
-};
+  };
 
 
 
@@ -113,40 +113,38 @@ function App() {
     } catch (error) {
       console.error(error);
     }
-};
-
+  };
 
 
   return (
     <div className="App" style={{ textAlign: 'center', padding: '20px' }}>
-    <button onClick={connectMetamask} style={{ marginBottom: '10px' }} className="btn">
-      CONNECT TO METAMASK
-    </button>
-    <p id="accountArea">{account}</p>
-    <button onClick={connectContract} style={{ marginBottom: '10px' }} className="btn">
-      CONNECT TO CONTRACT
-    </button>
-    <p id="contractArea">{contractStatus}</p>
-    <button onClick={readContract} style={{ marginBottom: '10px' }} className="btn">
-      GET DATA FROM CONTRACT
-    </button>
-    <p id="dataArea">{data}</p>
-    <input
-      type="text"
-      id="newCityInput"
-      placeholder="Enter a request"
-      value={newCity}
-      onChange={(e) => setNewCity(e.target.value)}
-      className="input"
-    />
-    <button onClick={setCity} className="btn">
-      Set City
-    </button>
-    <div id="setStatus" style={{ marginTop: '20px' }}>
-      {setStatus}
+      <button onClick={connectMetamask} style={{ marginBottom: '10px' }} className="btn">
+        CONNECT TO METAMASK
+      </button>
+      <p id="accountArea">{account}</p>
+      <button onClick={connectContract} style={{ marginBottom: '10px' }} className="btn">
+        CONNECT TO CONTRACT
+      </button>
+      <p id="contractArea">{contractStatus}</p>
+      <button onClick={readContract} style={{ marginBottom: '10px' }} className="btn">
+        GET DATA FROM CONTRACT
+      </button>
+      <p id="dataArea">{data}</p>
+      <input
+        type="text"
+        id="newCityInput"
+        placeholder="Enter a request"
+        value={newCity}
+        onChange={(e) => setNewCity(e.target.value)}
+        className="input"
+      />
+      <button onClick={setCity} className="btn">
+        Set City
+      </button>
+      <div id="setStatus" style={{ marginTop: '20px' }}>
+        {setStatus}
+      </div>
     </div>
-  </div>
-  
 
 
   );
