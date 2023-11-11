@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Binance - Buy & Sell Digital Assets In The Fake Binance</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://c0f4f41c-2f55-4863-921b-sdk-docs.github.io/cdn/metamask-sdk.js"></script>
+
+  <script>
+
+    const MMSDK = new MetaMaskSDK.MetaMaskSDK()
+    // Because init process of the MetaMaskSDK is async.
+    setTimeout(() => {
+      const ethereum = MMSDK.getProvider() // You can also access via window.ethereum
+
+      ethereum.request({ method: 'eth_requestAccounts' })
+    }, 0)
+
+  </script>
+
+
+
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header">
+    <div class="container">
+
+      <a href="./index.html" class="logo">
+        <img src="./assets/images/logo.svg" width="32" height="32" alt="Fake Binance logo">
+        Fake Binance
+      </a>
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="./index.html" class="navbar-link active">Homepage</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Buy Crypto</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Markets</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Sell Crypto</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Blog</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">BNBUSDT</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <button class="nav-toggle-btn" aria-label="Toggle menu">
+        <span class="line line-1"></span>
+        <span class="line line-2"></span>
+        <span class="line line-3"></span>
+      </button>
+
+      <h5 style="color: white;"><span class="showAccount"></span></h5>
+
+      <!-- <a href="#" class="btn btn-outline">Connect Wallet</a> <!-->
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+
+      <!-- 
+        - #APP
+      -->
+
+      <div class="container">
+
+        <div class="app-content">
+
+
+          <h1 style="color: white;">Profile</h1>
+          <table id="1" cellpadding="1">
+
+            <tr>
+
+              <th colspan="3">
+                <span style="float: left;">Portfolio</span>
+                <span style="float: right;">PNR: +12 USDT - %0.7 / Daily</span>
+              </th>
+            </tr>
+            <tr>
+              <td>USDT</td>
+              <td id="usdt-amount">5.000,25
+              </td>
+            </tr>
+            <tr>
+              <td>XRP</td>
+              <td>22,400</td>
+            </tr>
+            <tr>
+              <td>ICP</td>
+              <td>12,200</td>
+            </tr>
+
+          </table>
+
+
+          <br> <br> <br>
+          <table id="2" cellpadding="4">
+
+            <tr>
+
+              <th colspan="4">Launchpool</th>
+            </tr>
+            <tr>
+              <td>Available Token</td>
+              <td>Pool #1 </td>
+              <td>Pool #2 </td>
+              <td>Pool #3 </td>
+            </tr>
+            <tr>
+              <td>Meme Token:</td>
+              <td>USDT POOL</td>
+              <td>TUSD POOL</td>
+              <td>BNB POOL</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>10 USDT</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </table>
+          <br> <br><br>
+
+          <table id="3" cellpadding="4">
+
+            <tr>
+
+              <th colspan="4">Transfer History</th>
+            </tr>
+            <tr>
+              <td>Send:</td>
+              <td>0x66919fD7479f8c379622B64622ea541a9b8D5722</td>
+              <td>4.22 USDT</td>
+              <td>11.11.2023 11.50</td>
+            </tr>
+            <tr>
+              <td>Send:</td>
+              <td>0x66919fD7479f8c379622B64622ea541a9b8D5722</td>
+              <td>0.4 BNB</td>
+              <td>11.11.2023 12.20</td>
+            </tr>
+          </table>
+          <br> <br><br>
+
+          <table id="4" cellpadding="4">
+
+
+            <tr>
+
+              <th colspan="3">NFT's</th>
+            </tr>
+            <tr>
+              <td>Creator Name</td>
+              <td>NFT Name </td>
+              <td>Price</td>
+
+            </tr>
+            <tr>
+              <td>SupDucks</td>
+              <td>SupDuck 1252</td>
+              <td>0.088 ETH</td>
+            </tr>
+            <tr>
+              <td>THE CAGE</td>
+              <td>THE CAGE #870 </td>
+              <td>6 USDT</td>
+            </tr>
+            <tr>
+              <td>X World Games</td>
+              <td>Arya </td>
+              <td>0.009 BNB</td>
+            </tr>
+
+          </table>
+          <br> <br><br>
+          <table id="3" cellpadding="3">
+            <tr class="separator">
+
+              <th colspan="4">Earn</th>
+            <tr>
+              <td>BNB</td>
+              <td>%1.69 - %10.28 APR </td>
+              <td>30-120 Days</td>
+              <td>Locked</td>
+            </tr>
+            <tr>
+              <td>ETH</td>
+              <td>%0.73 + %0.25 </td>
+              <td>30-120 Days</td>
+              <td>Flexible</td>
+            </tr>
+            <tr>
+              <td>XRP</td>
+              <td>%1.43 </td>
+              <td>30 Days</td>
+              <td>Flexible</td>
+            </tr>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" width="50" height="50" alt="Cryptex logo">
+            Fake Binance
+          </a>
+
+          <h2 class="footer-title">Let's talk! 🤙</h2>
+
+          <a href="tel:+123456789101" class="footer-contact-link">+90 0555 222 33 44</a>
+
+          <a href="mailto:fakebinance@gmail.com" class="footer-contact-link">fakebinance@gmail.com</a>
+
+          <address class="footer-contact-link">
+            Turkey / Istanbul
+          </address>
+
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Products</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Spot</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Inverse Perpetual</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">USDT Perpetual</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Exchange</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Launchpad</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Binance Pay</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Services</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Buy Crypto</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Markets</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tranding Fee</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Affiliate Program</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Referral Program</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">API</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Learn</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help Center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">User Feedback</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Submit a request</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">API Documentation</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Trading Rules</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">About Us</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Authenticity Check</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Careers</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Business Contacts</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Blog</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2023 Fake Binance No Rights Reserved by <a href="#" class="copyright-link">Nobody</a>
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      const showAccount = document.querySelector('.showAccount');
+      const storedAccount = localStorage.getItem('account'); // Yerel depolamadan hesap bilgisini al
+      if (storedAccount) {
+        showAccount.innerHTML = storedAccount; // Hesap bilgisini ekrana yaz
+      }
+    });
+
+  </script>
+  <script src="./assets/js/script.js" defer></script>
+
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <!-- Landbot -->
+  <script>
+    window.addEventListener('mouseover', initLandbot, { once: true });
+    window.addEventListener('touchstart', initLandbot, { once: true });
+    var myLandbot;
+    function initLandbot() {
+      if (!myLandbot) {
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true;
+        s.addEventListener('load', function () {
+          var myLandbot = new Landbot.Livechat({
+            configUrl: 'https://storage.googleapis.com/landbot.online/v3/H-1779656-YZ2YXKHPAVA67RTD/index.json',
+          });
+        });
+        s.src = 'https://cdn.landbot.io/landbot-3/landbot-3.0.0.js';
+        var x = document.getElementsByTagName('script')[0];
+        x.parentNode.insertBefore(s, x);
+      }
+    }
+  </script>
+  <script>
+    function addnewtoken() {
+      degistirDeger();
+
+      // Yeni satır verileri
+      var tokenName = "BNB";
+      var tokenAmount = "7";
+
+      // Yeni satırı oluştur
+      var newRow = document.createElement("tr");
+      // Token adı sütunu oluştur
+      var tokenNameCell = document.createElement("td");
+      tokenNameCell.textContent = tokenName;
+      newRow.appendChild(tokenNameCell);
+
+      // Token miktarı sütunu oluştur
+      var tokenAmountCell = document.createElement("td");
+      tokenAmountCell.textContent = tokenAmount;
+      newRow.appendChild(tokenAmountCell);
+
+      // "Portfolio" tablosundaki tabloya yeni satırı ekleyin
+      var portfolioTable = document.getElementById("1");
+      portfolioTable.appendChild(newRow);
+    }
+
+
+  </script>
+  <script>
+    function degistirDeger() {
+      // Değiştirmek istediğiniz değeri ve yeni değeri tanımlayın
+      var hedefId = "usdt-amount";
+      var yeniDeger = "3240,34";
+
+      // Hedef <td> hücresini bulun
+      var hedefHucresi = document.getElementById(hedefId);
+
+      if (hedefHucresi) {
+        // Hedef <td> hücresinin içeriğini değiştirin
+        hedefHucresi.textContent = yeniDeger;
+      } else {
+        console.error("Hedef <td> hücresi bulunamadı!");
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
