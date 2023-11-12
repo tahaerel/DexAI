@@ -47,7 +47,7 @@ Open with live server
 How it works:
 
 
-![Screenshot_2](https://github.com/tahaerel/DexAI/assets/63150746/d7effefc-159d-45ac-a5b6-90216e589e99)
+![Screenshot_3](https://github.com/tahaerel/DexAI/assets/63150746/bfad86f4-d027-452b-80e3-3a0e2d1cb4ea)
 
 
 
