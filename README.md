@@ -33,6 +33,7 @@ https://github.com/tahaerel/DexAI/assets/63150746/3086e221-ddb4-4f84-98a8-61c3e8
 
 
 To run the code:
+Enter ChatGpt Api keys to App.jss and App_Contract.jsj
 npm i
 npm start
 
