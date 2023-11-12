@@ -25,3 +25,29 @@ https://github.com/tahaerel/DexAI/assets/63150746/14d4c443-ba9b-4c97-8363-f50a91
 
 2-
 A simple smart contract example is given with App_Contract.js. In the same way, the city name is saved in the smart contract regardless of the typing style of the other person.
+
+
+https://github.com/tahaerel/DexAI/assets/63150746/3086e221-ddb4-4f84-98a8-61c3e8f3294e
+
+
+To run the code:
+npm i
+npm start
+
+
+3-
+A fake dex has been developed in the Fake Binance File. Here the use of chatbot and items 1 and 2 on a sample dex is given.
+
+
+https://github.com/tahaerel/DexAI/assets/63150746/edf34d27-7475-4ce4-a9b6-5e854ecfe5dd
+
+To run the code:
+Open with live server
+
+
+
+
+
+
+
+
