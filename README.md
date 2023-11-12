@@ -1,7 +1,6 @@
 # DexAI
 
-
-![Başlıksız-1](https://github.com/tahaerel/DexAI/assets/63150746/03b6e7b1-5c07-48a0-81a0-a06c76904614)
+![Başlıksız-1](https://github.com/tahaerel/DexAI/assets/63150746/b18764ae-25bf-490d-89de-a4fe7e6ff195)
 
 
 Made for Bnb Chain Hackathon Istanbul in 48 hours.
