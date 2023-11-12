@@ -11,7 +11,7 @@ import {
   ClockLoading, RotateLoading, SpinLoading,
   WaveLoading, DashLoading, CopperLoading
 } from 'respinner'
-//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
+
 
 const startPayment = async ({ setError, setTxs, ether, addr }) => {
   const { ethereum } = window;

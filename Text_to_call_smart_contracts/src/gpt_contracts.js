@@ -1,5 +1,5 @@
 const OpenAI = require("openai") ;
-const openai = new OpenAI({ apiKey: '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',dangerouslyAllowBrowser: true })
+const openai = new OpenAI({ apiKey: "API KEY HERE",dangerouslyAllowBrowser: true })
 
 export async function gptfunction(data)  {
 
