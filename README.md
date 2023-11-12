@@ -44,7 +44,10 @@ https://github.com/tahaerel/DexAI/assets/63150746/edf34d27-7475-4ce4-a9b6-5e854e
 To run the code:
 Open with live server
 
+How it works:
 
+
+![Screenshot_2](https://github.com/tahaerel/DexAI/assets/63150746/d7effefc-159d-45ac-a5b6-90216e589e99)
 
 
 
