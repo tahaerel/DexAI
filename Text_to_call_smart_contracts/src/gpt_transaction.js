@@ -29,7 +29,7 @@ export async function gptfunction(data) {
         
         console.log("adres:", address);
         console.log("parabirim:", parabirim);
-        console.log("asdnetwork:", network);
+        console.log("network:", network);
         console.log("value:", value);
         return[address, parabirim, network, value];
       } else {
