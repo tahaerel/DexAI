@@ -6,7 +6,7 @@ export async function gptfunction(data)  {
     const completion = await openai.chat.completions.create({
         messages: [
         
-        { role: "system", content: "Blockchain contratları için chatbot yapıyorum.Sana verilen metinde şehir ismi geçiyorsa o şehir ismini çıktı olarak ver. Çıktı sadece şehir ismi olsun. Örneğin 'izmir', 'ankara', 'muğla'. Birden fazla şehir varsa metindeki ilk şehiri çıktı olarak ver. Çıktıların 1 kelime olmak zorunda. O da şehir adı. Tüm diller için çalış. " },
+        { role: "system", content: "I am making a chatbot for blockchain contracts. If the city name is mentioned in the text given to you, give that city name as output. Let the output be only the city name. For example 'izmir', 'ankara', 'muğla'. If there is more than one city, output the first city in the text. Your outputs must be 1 word. That is the city name. Work for all languages." },
         
         { role: "user", content: data.toString()}],
 

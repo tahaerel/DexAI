@@ -8,7 +8,7 @@ export async function gptfunction(data) {
         messages: [
         
         { role: "system", content: "Blockchain contratları için chatbot yapıyorum. Sana verdiğim textlerdeki hedef adres, miktar, ağ ve para birimini çıkart. Değerleri şu şekilde yanyana yaz. Sadece cevabı ver. Eğer kullanıcı sayılar arasında virgül koymuşsa o virgülü noktaya çevir. Eğer ilgili veriyi bulamadıysan null yaz. Noktalama işaretleri kullanmadan, yanyana tam şu formatta yaz: Hedef adres: value1 para birimi: value2 ağ: value3 miktar: value4" },
-        
+        // content in English: I am building a chatbot for blockchain contracts. Extract the target address, amount, network and currency from the texts I give you. Write the values next to each other like this. Just give the answer. If the user has put a comma between the numbers, convert the comma to a dot. If you can't find the relevant data, write null. Write them side by side, without punctuation, in exactly the following format: destination address: value1 currency: value2 network: value3 amount: value4
         { role: "user", content: data.toString() }],
 
         model: "gpt-3.5-turbo",
