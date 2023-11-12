@@ -1,6 +1,6 @@
 # DexAI
 
-![Resim1](https://github.com/tahaerel/DexAI/assets/63150746/2c530c6d-6637-448e-bab8-19f649ad96c3)
+![dexailogo](https://github.com/tahaerel/DexAI/assets/63150746/9c0fa23c-10ee-4e03-b496-19fb29ca7c31)
 
 OPbnb Chain is a suitable network for chatbot with its fast speed.
 DexAI is an artificial intelligence-based chatbot service that combines blockchain and AI technologies, can be integrated into dex and dapps, and can call smart contracts via messaging.
