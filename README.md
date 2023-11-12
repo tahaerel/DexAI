@@ -20,5 +20,5 @@ There are 2 technical demos in the text_to_call_smart_contracts file. It is aime
 Regardless of the language and writing style, the necessary values (wallet address, balance, network, token) / (network and token are not mandatory) are received via text and the transfer is performed.
 
 
-https://github.com/tahaerel/DexAI/assets/63150746/bf813f63-844f-4c23-aefe-3b81b1e7cfe2
+<img src= "https://github.com/tahaerel/DexAI/assets/63150746/bf813f63-844f-4c23-aefe-3b81b1e7cfe2" width="200">
 
